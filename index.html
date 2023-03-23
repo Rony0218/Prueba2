@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INGRESO FONDO ROTATORIO DE VIVIENDA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>INGRESO FONDO ROTATORIO DE VIVIENDA</h1>
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="Usuario">
+            <input type="password" id="password" name="password" placeholder="Contraseña">
+            <button type="button" onclick="login()">Ingresar</button>
+        </form>
+        <h2 id="login-result" style="color: green;"></h2>
+
+        <!-- Tabla con información -->
+        <div id="info-table" style="display: none;">
+            <!-- Gráfico 1 -->
+            <div>
+                <canvas id="chart1"></canvas>
+            </div>
+
+            <!-- Gráfico 2 -->
+            <div>
+                <canvas id="chart2"></canvas>
+            </div>
+
+            <button type="button" onclick="logout()" style="margin-top: 20px;">Cerrar sesión</button>
+<button type="button" onclick="downloadExcel()" style="margin-top: 20px;">Descargar información en Excel</button>
+
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
